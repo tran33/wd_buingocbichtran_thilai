@@ -1,0 +1,447 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* background image */
+
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(5, 10, 29, 0.7)),url('./BG.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-position: 0 100px;
+}
+/* up arow */
+.move-up{
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+}
+.move-up > a > button{
+    background-color: rgb(236, 236, 236);
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.move-up > a > button > .arrow-up{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+}
+/* text box */
+.text-box > h1,.text-box > p{
+    align-content: center;
+    animation: fadeInLeft 1s;
+    position: relative;
+}
+.paragraph{
+    position: relative;
+    text-align: left;
+}
+.paragraph > p{
+    text-transform: uppercase;
+}
+.text-box > .visit-btn{
+    animation: fadeBelow 1s;
+    position: relative;
+}
+/* navigation */
+
+nav{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    background-image: linear-gradient(to right,rgba(17, 31, 86),cyan);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+nav img{
+    position: relative;
+    width: 140px;
+    height: 80px;
+    left: 6%;
+    cursor: pointer;
+}
+.nav-links{
+    right: 0;
+    flex: left;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul{
+    margin-right: 60px;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/* text box */
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 13px;
+}
+.visit-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 12px;
+    background: transparent;
+    position: relative;
+    border-radius: 12px;
+}
+.visit-btn:hover{
+    border: 1px solid #f1f1f1;
+    background: cyan;
+    transition: 1s;
+}
+
+.text-box > p > span{
+    color: rgb(80, 138, 255);
+    text-transform:uppercase;
+    transition: .8s;
+}
+
+.text-box > p > span:hover{
+    color: rgb(255, 196, 0);
+}
+
+/* shoe style */
+
+.shoe-style {
+    max-width:1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 36px;
+}
+.proc{
+    display: block;
+    float: left;
+    width: 24%;
+    padding: 0 6px;
+}
+h3{
+    font-weight: 100;
+    margin: 10px 0;
+    color: #444;
+	font-size: 18px;
+}
+.shoe-style > h1{
+    margin: 36px 0;
+}
+.shoe-style > p{
+    font-size: 15px;
+    line-height: 1.2;
+}
+.shoe-style img{
+    height: 180px;
+    width: 288px;
+}
+figure{
+    height: 180px;
+    width: 288px;
+    overflow: hidden;
+}
+
+.view{
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 8px;
+    color: rgb(244, 244, 244);
+    background-color: rgb(235, 165, 0);
+    border: 1px solid white;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.view:hover{
+    background-image: linear-gradient(to bottom right,  rgb(255, 196, 0),rgb(64, 208, 208));
+}
+
+/* animation */
+.bitis a img{
+    filter: blur(3px);
+    transition: .6s ease-in-out;
+}
+.bitis a:hover img{
+    filter: blur(0);
+}
+.adidas a img,.vans a img{
+    transform: scale(1);
+    transition: .6s ease-in-out;
+}
+.adidas a:hover img{
+    width: 288px;
+    transform: scale(1.45);
+}
+/* vans */
+.vans a:hover img{
+    transform: scale(1.2,1.4);
+}
+/* jordan */
+.jordan a img{
+    filter: grayscale(100%);
+    transition: .6s ease-in-out;
+}
+.jordan a:hover img{
+    filter: grayscale(0);
+}
+/* new balance */
+.nike a img{
+    margin-left: 30px;
+    transform: scale(1.4);
+    transition: .6s ease-in-out;
+}
+.nike a:hover img{
+    margin-left: 0;
+}
+/* new balance */
+.new-balance a img{
+    margin-top: 0;
+    transform: scale(1.2);
+    transition: .6s ease-in-out;
+}
+.new-balance a:hover img{
+    margin-top: 10px;
+}
+/* puma */
+.puma a img{
+    transform: scale(1.2);
+    transition: .6s ease-in-out;
+}
+.puma a:hover img{
+    transform: scale(1);
+}
+/* woodland */
+.woodland a img{
+    filter: sepia(100%);
+    transition: .6s ease-in-out;
+}
+.woodland a:hover img{
+    filter: sepia(0);
+}
+/* view all */
+.view-all{
+    text-decoration: none;
+    font-size: 28px;
+    color: black;
+}
+.view-all:hover{
+    color: rgb(255, 196, 0);
+}
+/* bar */
+
+.bar-item{
+    margin: 40px 6px 40px 0;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 14px;
+} 
+.bar-item:last-child{
+    margin-right: 0;
+}
+.bar-item-black{
+    background-color: black;
+    color: white;
+}
+.bar-items > .bar-item:hover{
+    background-color: black;
+    color: white;
+    font-weight: 100;
+}
+
+/* about */
+.about{
+    text-align: left;
+    height: 675px;
+    background-image: url('https://t3.ftcdn.net/jpg/02/74/05/62/360_F_274056256_3I7cvSpoxRzMmnHVgeXZ8zLt58wN75Y0.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.about > h1{
+    padding: 60px 0 0 40px;
+    font-family: auto;
+    font-size: 60px;
+    color: rgb(164, 255, 255);
+}
+.about > ul{
+    padding: 60px 0 0 40px;
+    font-family: auto;
+    list-style: none;
+}
+.about > ul > li{
+    font-size: 24px;
+    line-height: 90px;
+    color: rgb(255, 0, 0);
+}
+.about > ul > li > span{
+    font-size: 36px;
+    color: rgb(60, 60, 63);
+}
+/* contact */
+.contact{
+    text-align: center;
+    padding: 42px 16px 96px 16px;
+    background-color: #f1f1f1;
+    font-family:'Times New Roman', Times, serif;
+}
+.contact > h3{
+    font-size: 24px;
+}
+.contact > h3:hover{
+    color: rgb(197, 28, 28);
+}
+.title{
+    font-size: 20px;
+}
+form > p > .form{
+    border: 1px solid #ccc;
+    display: block;
+    padding: 8px;
+    margin-top: 36px;
+    margin-left: 160px;
+    width: 80%;
+}
+form > p > button{
+    position: relative;
+    float: left;
+    top: 24px;
+    left: 160px;
+    height: 42px;
+    width: 120px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+form > p > button:hover{
+    transition: .5s;
+    background-color: #444;
+}
+
+footer{
+    background-color: rgb(44, 44, 44);
+    padding: 30px 18px 40px 18px;
+}
+.footer-nav-links > ul{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    list-style: none;
+}
+.footer-nav-links > ul > li > a{
+    text-decoration: none;
+    color: #ccc;
+}
+footer > h1{
+    text-align: center;
+    margin-bottom: 32px;
+    color: rgb(193, 193, 193);
+}
+footer > h2{
+    margin-top: 36px;
+    text-align: center;
+    color: white;
+}
+footer > .footer-ref > ul{
+    margin-top: 16px;
+    list-style: none;
+    display: flex;
+    justify-content:center;
+}
+.footer-ref > ul > li > a > img{
+    border-radius: 8px;
+    width: 24px;
+    margin-right: 16px;
+    transition: .6s;
+}
+.footer-ref > ul > li > a > img:hover{
+    transform: scale(1.5);
+    padding: 1px;
+}
+.footer-ref > ul > li > a > img:last-child{
+    margin-right: none;
+}
+.nav-ref{
+    cursor: pointer;
+}
+.button-content{
+    border-radius: 16px;
+}
+
+@keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+}
+@keyframes fadeBelow {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+}    
+@keyframes Slide {
+	0% {transform:translateX(-100%);}
+	100% {transform:translateX(100%);}
+}
